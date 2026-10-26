@@ -1,0 +1,62 @@
+{
+  "env": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "transformers": "5.21.0",
+    "sklearn": "1.9.1",
+    "gpu": "Tesla T4"
+  },
+  "hyperparams": {
+    "model": "google/muril-base-cased",
+    "max_len": 128,
+    "seed": 42,
+    "lr": 2e-05,
+    "batch": 16,
+    "weight_decay": 0.01,
+    "warmup_steps": 100,
+    "epochs_A": 6,
+    "epochs_B": 8,
+    "early_stop_patience": 3
+  },
+  "taskA": {
+    "best_C": 0.5,
+    "ens_w_svm": 0.65,
+    "ens_threshold": 0.4400000000000001,
+    "n_pseudo": 165,
+    "conf_thr": 0.92,
+    "val": [
+      {
+        "model": "TF-IDF+SVM",
+        "f1_macro": 0.8004
+      },
+      {
+        "model": "MuRIL",
+        "f1_macro": 0.7858
+      },
+      {
+        "model": "Ensemble",
+        "f1_macro": 0.8115
+      }
+    ]
+  },
+  "taskB": {
+    "best_C": 0.3,
+    "ens_w_svm": 0.2,
+    "n_pseudo": 0,
+    "conf_thr": 0.85,
+    "val": [
+      {
+        "model": "TF-IDF+SVM",
+        "f1_macro": 0.5572
+      },
+      {
+        "model": "MuRIL",
+        "f1_macro": 0.507
+      },
+      {
+        "model": "Ensemble",
+        "f1_macro": 0.5897
+      }
+    ]
+  }
+}

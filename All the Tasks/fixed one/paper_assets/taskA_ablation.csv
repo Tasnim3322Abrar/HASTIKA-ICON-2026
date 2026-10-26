@@ -1,0 +1,9 @@
+experiment,setting,macro_F1,std
+Preprocessing,without ftfy fix,0.795,0.0065
+Preprocessing,with ftfy fix,0.8023,0.0064
+Features,word only,0.7663,0.0068
+Features,char only,0.8091,0.0075
+Features,word+char (ours),0.8023,0.0064
+Baseline,majority class,0.3376,0.0
+Baseline,TF-IDF + LogReg,0.801,0.0083
+Baseline,TF-IDF + ComplementNB,0.7856,0.0037

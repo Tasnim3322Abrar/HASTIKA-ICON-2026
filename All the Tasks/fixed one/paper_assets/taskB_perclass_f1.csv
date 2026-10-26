@@ -1,0 +1,7 @@
+,TF-IDF+SVM,MuRIL,Ensemble,support
+Gender,0.7649,0.5949,0.778,230
+Political,0.7513,0.7933,0.7912,95
+Religion,0.7244,0.6752,0.75,65
+Geo-political,0.4783,0.5538,0.6207,31
+Violence,0.2273,0.0,0.1951,37
+Others,0.3968,0.425,0.4032,76
